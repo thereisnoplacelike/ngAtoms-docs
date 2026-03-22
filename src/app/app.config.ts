@@ -1,3 +1,4 @@
+import { APP_BASE_HREF } from '@angular/common';
 import {
   provideHttpClient,
   withFetch,
@@ -14,6 +15,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideFileRouter(),
+    { provide: APP_BASE_HREF, useValue: '/ngAtoms-docs/' },
     provideHttpClient(
       withFetch(),
       withInterceptors([requestContextInterceptor])
