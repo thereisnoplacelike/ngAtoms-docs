@@ -32,6 +32,8 @@ jobs:
 
       - run: touch dist/client/.nojekyll
 
+      - run: echo "ngatoms.com" > dist/client/CNAME
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/client
